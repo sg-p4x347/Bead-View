@@ -49,7 +49,30 @@ div {
 #canvas {
 	display: inline-block;
 }
-#selection {
+#view {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#clear {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+#remove {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+#name {
+	width: 8em;
+}
+#load {
+	width: 8em;
+}
+.selection {
+	padding: 0px;
+	margin: 4px;
 	vertical-align: top;
 	display: inline-block;
 	list-style: none;
