@@ -55,7 +55,9 @@ function Application () {
 				var offset = (2 * Math.PI)/self.jewellery.mirror;
 				for (var theta = 0; theta < 2 * Math.PI; theta += offset) {
 					var texture = self.textures[bead.color + ' ' + bead.type];
-					self.ctx.drawImage(texture, 0,0,texture.width,texture.height,Math.round((jewellery.radius - (bead.radius*(texture.width/texture.height))) * self.scale),Math.round(-bead.radius * self.scale),Math.round((bead.radius*(texture.width/texture.height))*2 * self.scale),Math.round(bead.radius*2*self.scale));
+					if (texture) {
+						self.ctx.drawImage(texture, 0,0,texture.width,texture.height,Math.round((jewellery.radius - (bead.radius*(texture.width/texture.height))) * self.scale),Math.round(-bead.radius * self.scale),Math.round((bead.radius*(texture.width/texture.height))*2 * self.scale),Math.round(bead.radius*2*self.scale));
+					}
 					self.ctx.rotate(offset);
 				}
 				self.ctx.rotate(offset);
